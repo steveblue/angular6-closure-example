@@ -8,10 +8,10 @@ To build, clone the angular rollup repo and checkout the feature/next branch, th
 
 node > 8.0.0 and < 9.0.0 has been tested.
 
-git clone https://github.com/steveblue/angular2-rollup.git
-git checkout feature/next
-npm install
-npm link
+- `git clone https://github.com/steveblue/angular2-rollup.git`
+- `git checkout feature/next`
+- `npm install`
+- `npm link`
 
 
 Clone this repo and install dependencies.
