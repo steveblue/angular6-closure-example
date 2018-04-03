@@ -7,13 +7,7 @@
     "contributors": [],
     "main": "./main.electron.js",
     "scripts": {
-        "clean": "rimraf node_modules ngfactory doc build && npm cache clean",
-        "clean:install": "npm run clean && npm install",
-        "clean:build": "rimraf build",
-        "clean:tmp": "rimraf tmp",
-        "clean:ngfactory": "rimraf ngfactory && mkdir ngfactory",
-        "bundle:closure": "java -jar node_modules/google-closure-compiler/compiler.jar --warning_level=QUIET --flagfile closure.conf --js_output_file ./build/bundle.js --output_manifest=closure/manifest.MF",
-        "transpile:prod": "java -jar node_modules/google-closure-compiler/compiler.jar --warning_level=QUIET --language_in=ES6 --language_out=ES5 --js ./build/bundle.es2015.js --js_output_file ./build/bundle.js",
+        "rollup:closure": "rollup -c rollup.config.js",
         "webdriver:update": "webdriver-manager update",
         "webdriver:start": "webdriver-manager start",
         "lint": "tslint --force \"src/app/**/*.ts\"",
@@ -26,8 +20,6 @@
         "ci:watch": "npm run e2e && npm run test:watch",
         "start": "ngr --build dev --watch --serve",
         "serve": "node server.js",
-        "electron": "electron ./main.electron.js",
-        "universal": "node server.universal.js",
         "postinstall": ""
     },
     "dependencies": {
