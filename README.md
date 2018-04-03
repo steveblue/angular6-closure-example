@@ -16,6 +16,9 @@ node > 8.0.0 and < 9.0.0 has been tested.
 
 Clone this repo and install dependencies.
 
+- `git clone https://github.com/steveblue/angular6-closure-example.git`
+- `npm install`
+
 `npm run rollup:closure` will generate FESM but we still need to trick closure into identifying the FESM as entry points.
 
 Edit `node_modules/rxjs/package.json` and change the line that points to the es2015 bundle to now point to the FESM:
